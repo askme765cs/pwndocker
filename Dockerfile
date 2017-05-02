@@ -15,6 +15,7 @@ RUN dpkg --add-architecture i386 && \
     libssl-dev \
     python3-pip \
     python-pip \
+    python-dev \
     tmux \
     strace \
     ltrace \
