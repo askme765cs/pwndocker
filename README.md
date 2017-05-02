@@ -1,7 +1,6 @@
 Pwndocker
 =========
-A docker environment for pwn in ctf based on **phusion/baseimage**, which is a modified ubuntu 16.04 baseimage for docker
-
+A docker environment for pwn in ctf based on **ubuntu14.04**
 ### Usage
 
 	docker run -it \
@@ -10,8 +9,8 @@ A docker environment for pwn in ctf based on **phusion/baseimage**, which is a m
 		--name ${ctf_name} \
 		-v $(pwd)/${ctf_name}:/ctf/work \
     	-p 23946:23946 \
-    	--cap-add=SYS_PTRACE \
-		skysider/pwndocker
+    	--privileged \
+		skysider/pwndocker:14.04
 	
 	
 ### included software
