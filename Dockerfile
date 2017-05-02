@@ -16,7 +16,6 @@ RUN dpkg --add-architecture i386 && \
     python3-pip \
     python-pip \
     python-capstone \
-    ruby2.3 \
     tmux \
     strace \
     ltrace \
@@ -38,10 +37,6 @@ RUN pip install --no-cache-dir \
     pwntools \
     zio \
     angr
-
-RUN gem install \
-    one_gadget && \
-    rm -rf /var/lib/gems/2.3.*/cache/*
     
 RUN wget -q -O- https://github.com/hugsy/gef/raw/master/gef.sh | sh
 
