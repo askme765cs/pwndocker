@@ -25,11 +25,12 @@ RUN dpkg --add-architecture i386 && \
     socat --fix-missing && \
     rm -rf /var/lib/apt/list/*
 
-RUN pip3 install --no-cache-dir \
+RUN pip3 install \
     ropper \
     unicorn \
     keystone-engine \
-    capstone
+    capstone && \
+    rm -rf ~/.cache/pip/*
     
 RUN pip install --no-cache-dir \
     ropgadget \
