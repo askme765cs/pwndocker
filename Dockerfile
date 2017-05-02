@@ -29,10 +29,9 @@ RUN pip3 install \
     ropper \
     unicorn \
     keystone-engine \
-    capstone && \
-    rm -rf ~/.cache/pip/*
+    capstone
     
-RUN pip install --no-cache-dir \
+RUN pip install \
     ropgadget \
     pwntools \
     zio \
