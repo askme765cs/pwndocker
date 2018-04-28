@@ -48,9 +48,8 @@ RUN gem install \
     one_gadget && \
     rm -rf /var/lib/gems/2.3.*/cache/*
 
-RUN git clone https://github.com/pwndbg/pwndbg && \
-    cd pwndbg && sed -i s/sudo//g setup.sh && \
-    chmod +x setup.sh && ./setup.sh
+RUN git clone https://github.com/longld/peda.git ~/peda && \
+    echo "source ~/peda/peda.py" >> ~/.gdbinit
 
 RUN git clone https://github.com/lieanu/libc.git && \
     cd libc && git submodule update --init --recursive && \
