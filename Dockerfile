@@ -41,7 +41,10 @@ RUN pip install --no-cache-dir \
     ropgadget \
     pwntools \
     zio \
-    angr && \
+    ipython==5 \
+    monkeyhex \
+    angr \
+    angrop && \
     pip install --upgrade pwntools
 
 RUN gem install \
